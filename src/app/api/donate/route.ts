@@ -17,16 +17,17 @@ import {
 // GET request handler
 export async function GET(request: Request) {
   const url = new URL(request.url);
+  const baseUrl = `${url.protocol}//${url.host}`;
   const payload: ActionGetResponse = {
-    icon: "/solana-donation/src/knaye.png", // Local icon path
-    title: "Donate to Rahul",
-    description: "Support Rahul by donating SOL.",
+    icon: `${baseUrl}/knaye.png`, // Updated path
+    title: "Feed YE",
+    description: "Support the revelution",
     label: "Donate",
     links: {
       actions: [
         {
           label: "Donate 0.1 SOL",
-          href: `${url.href}?amount=0.1`,
+          href: `${baseUrl}/api/donate?amount=0.1`,
         },
       ],
     },
