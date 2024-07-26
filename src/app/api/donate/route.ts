@@ -20,8 +20,8 @@ export async function GET(request: Request) {
   const baseUrl = `${url.protocol}//${url.host}`;
   const payload: ActionGetResponse = {
     icon: `${baseUrl}/knaye.png`, // Updated path
-    title: "Feed YE",
-    description: "Support the revelution",
+    title: "Feed THE FLOW",
+    description: "Drop SOL to drop sick beats",
     label: "Donate",
     links: {
       actions: [
